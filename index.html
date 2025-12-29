@@ -1,10 +1,298 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <title>My GitHub Page</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ashok Kumar Pyaram | AIML + Kafka Engineer</title>
+  <meta name="description" content="AIML + Kafka Engineer specializing in streaming data platforms, Confluent/Kafka, Kubernetes, Terraform, and cloud-native data engineering." />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1b33;
+      --text:#e8eefc;
+      --muted:#a8b3cf;
+      --accent:#4dd6c5;
+      --border:rgba(255,255,255,0.10);
+      --shadow: 0 16px 40px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 20% 0%, rgba(77,214,197,.16), transparent 60%),
+                  radial-gradient(1000px 700px at 80% 20%, rgba(120,140,255,.14), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:980px; margin:0 auto; padding:42px 20px 64px}
+    header{
+      display:flex; gap:18px; align-items:flex-start; justify-content:space-between;
+      margin-bottom:22px;
+    }
+    .title h1{margin:0; font-size:34px; letter-spacing:.2px}
+    .title p{margin:8px 0 0; color:var(--muted); max-width:70ch}
+    .badge-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
+    .badge{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:13px;
+      color:var(--muted);
+    }
+    nav{
+      display:flex; gap:14px; flex-wrap:wrap;
+      justify-content:flex-end;
+      align-items:center;
+      margin-top:6px;
+    }
+    nav a{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+      padding:8px 12px;
+      border-radius:12px;
+      font-size:14px;
+      color:var(--text);
+    }
+    nav a:hover{background: rgba(77,214,197,0.10); text-decoration:none}
+    .grid{
+      display:grid;
+      grid-template-columns: 1.4fr .9fr;
+      gap:16px;
+      margin-top:18px;
+    }
+    @media (max-width: 900px){
+      header{flex-direction:column}
+      nav{justify-content:flex-start}
+      .grid{grid-template-columns:1fr}
+    }
+    .card{
+      border:1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+      border-radius:18px;
+      padding:18px 18px;
+      box-shadow: var(--shadow);
+    }
+    .card h2{
+      margin:0 0 10px;
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+    .card p{margin:0 0 10px; color:var(--muted)}
+    ul{margin:10px 0 0; padding-left:18px; color:var(--muted)}
+    li{margin:6px 0}
+    .two-col{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+    @media (max-width: 520px){
+      .two-col{grid-template-columns:1fr}
+    }
+    .pill{
+      display:inline-block;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+      padding:6px 10px;
+      border-radius:999px;
+      margin:6px 6px 0 0;
+      font-size:13px;
+      color:var(--muted);
+    }
+    footer{
+      margin-top:18px;
+      color:rgba(232,238,252,.65);
+      font-size:13px;
+      text-align:center;
+    }
+    .cta{
+      display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;
+    }
+    .btn{
+      display:inline-block;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background: rgba(77,214,197,0.12);
+      color:var(--text);
+      font-weight:600;
+    }
+    .btn.secondary{background: rgba(255,255,255,0.04)}
+    .btn:hover{text-decoration:none; filter:brightness(1.05)}
+    code.inline{
+      background: rgba(255,255,255,0.06);
+      border:1px solid var(--border);
+      padding:2px 6px;
+      border-radius:8px;
+      color:var(--text);
+      font-size: 0.95em;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Hello World 👋</h1>
-  <p>This is my GitHub Pages site.</p>
+  <div class="wrap">
+    <header>
+      <div class="title">
+        <h1>Ashok Kumar Pyaram</h1>
+        <p>
+          AIML + Kafka Engineer focused on building reliable, high-throughput streaming and data platforms.
+          I design and deliver cloud-native solutions using Kafka/Confluent, Kubernetes, Terraform, and modern data engineering patterns.
+        </p>
+
+        <div class="badge-row">
+          <span class="badge">Kafka Engineering • Data Engineering</span>
+          <span class="badge">Confluent Certified Developer</span>
+          <span class="badge">AWS Solutions Architect (Certified)</span>
+          <span class="badge">AIML (BITS WILP)</span>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <!-- Optional: link to your resume PDF if you add it to repo -->
+        <!-- <a href="resume.pdf">Resume</a> -->
+      </nav>
+    </header>
+
+    <section class="grid">
+      <div class="card" id="about">
+        <h2>About</h2>
+        <p>
+          I’m a streaming-platform and data engineer with deep hands-on experience in <strong>Apache Kafka</strong> and the
+          <strong>Confluent ecosystem</strong> (Schema Registry, RBAC/ACLs, Connect, KSQL/Streams, Control Center).
+          I’ve led and contributed to large-scale data integration and migration programs, building resilient pipelines
+          from operational sources into analytics platforms.
+        </p>
+        <p>
+          My current focus is combining strong data-engineering fundamentals with <strong>AI/ML</strong>—from feature pipelines and
+          search/retrieval concepts to practical ML systems. I value reproducibility, clear architecture, and measurable reliability.
+        </p>
+
+        <div class="cta">
+          <!-- Replace # with your real links -->
+          <a class="btn" href="https://github.com/royalnestgit" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn secondary" href="#" target="_blank" rel="noopener">LinkedIn (add link)</a>
+          <a class="btn secondary" href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h2>Quick Highlights</h2>
+        <ul>
+          <li>Kafka platform design, governance, and operations (topics, RBAC/ACLs, Schema Registry, monitoring)</li>
+          <li>Kafka Connect (managed + self-managed) and custom connector/SMT development</li>
+          <li>Kubernetes deployments (AKS) and automation with <code class="inline">Terraform</code> pipelines</li>
+          <li>Cloud-native integration patterns, reliability, observability, and scaling</li>
+          <li>Actively upskilling in AIML (BITS WILP) with interest in IR/search + RL + ML systems</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="grid" style="margin-top:16px;">
+      <div class="card" id="skills">
+        <h2>Core Skills</h2>
+        <div class="two-col">
+          <div>
+            <p><strong>Streaming & Data Platforms</strong></p>
+            <span class="pill">Apache Kafka</span>
+            <span class="pill">Confluent Cloud</span>
+            <span class="pill">Kafka Connect</span>
+            <span class="pill">Kafka Streams</span>
+            <span class="pill">KSQL/ksqldb</span>
+            <span class="pill">Schema Registry (Avro)</span>
+            <span class="pill">RBAC / ACLs</span>
+            <span class="pill">Control Center</span>
+          </div>
+          <div>
+            <p><strong>Cloud, DevOps & Engineering</strong></p>
+            <span class="pill">Kubernetes (AKS)</span>
+            <span class="pill">Terraform</span>
+            <span class="pill">Python</span>
+            <span class="pill">Spring Boot</span>
+            <span class="pill">CI/CD Automation</span>
+            <span class="pill">Monitoring & Alerting</span>
+            <span class="pill">Data Governance</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Connectors & Integrations</h2>
+        <p>Experience working with a range of sources/sinks and enterprise systems, including:</p>
+        <div>
+          <span class="pill">Postgres</span>
+          <span class="pill">Snowflake</span>
+          <span class="pill">Salesforce</span>
+          <span class="pill">Couchbase</span>
+          <span class="pill">Google Docs</span>
+          <span class="pill">Custom Connectors</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="projects" style="margin-top:16px;">
+      <h2>Featured Work</h2>
+      <p>
+        Below are example project areas you can list. Replace text with your actual resume/project details and add links to repos.
+      </p>
+      <ul>
+        <li>
+          <strong>Confluent Platform Automation with Terraform</strong> — Provisioned clusters, topics, RBAC/ACLs, Schema Registry, and connectors using repeatable pipelines.
+          <em> (Add repo link)</em>
+        </li>
+        <li>
+          <strong>Self-managed Connect on Kubernetes (AKS)</strong> — Deployed CFK-based connector runtimes, monitoring/alerting, and containerized producers/consumers.
+          <em> (Add repo link)</em>
+        </li>
+        <li>
+          <strong>Custom SMT / Validation Layer</strong> — Implemented transformations (e.g., JSON → Avro), error handling, and dynamic data validation for robust ingestion.
+          <em> (Add repo link)</em>
+        </li>
+        <li>
+          <strong>AIML Coursework & Experiments</strong> — Building foundations in ML systems, IR/search, RL, and applied modeling with reproducible notebooks.
+          <em> (Add repo link)</em>
+        </li>
+      </ul>
+    </section>
+
+    <section class="grid" style="margin-top:16px;">
+      <div class="card" id="contact">
+        <h2>Contact</h2>
+        <p>
+          Add your preferred contact method below.
+        </p>
+        <ul>
+          <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+          <li>LinkedIn: <a href="#" target="_blank" rel="noopener">Add your profile link</a></li>
+          <li>GitHub: <a href="https://github.com/royalnestgit" target="_blank" rel="noopener">github.com/royalnestgit</a></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>What I’m Exploring</h2>
+        <ul>
+          <li>ML systems fundamentals and scalable feature/data pipelines</li>
+          <li>Information Retrieval & Search (ranking, indexing, evaluation)</li>
+          <li>Streaming-first architectures for real-time ML</li>
+          <li>Observability: metrics, SLOs, and performance tuning for Kafka</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Ashok Kumar Pyaram • Built with GitHub Pages
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
