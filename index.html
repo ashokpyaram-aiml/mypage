@@ -1,296 +1,416 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ashok Kumar Pyaram | AIML + Kafka Engineer</title>
-  <meta name="description" content="AIML + Kafka Engineer specializing in streaming data platforms, Confluent/Kafka, Kubernetes, Terraform, and cloud-native data engineering." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashok Kumar Pyaram | AI/ML Principal Engineer</title>
+  <meta name="description" content="Portfolio and profile of Ashok Kumar Pyaram, AI/ML Principal Engineer specializing in NLP, GenAI, MLOps, Kafka, and Spark." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    :root{
-      --bg:#0b1220;
-      --card:#0f1b33;
-      --text:#e8eefc;
-      --muted:#a8b3cf;
-      --accent:#4dd6c5;
-      --border:rgba(255,255,255,0.10);
-      --shadow: 0 16px 40px rgba(0,0,0,.35);
+    :root {
+      --bg: #f4f1ea;
+      --ink: #1f1d1a;
+      --muted: #5f5b54;
+      --card: #fffdfa;
+      --line: #d9d0c3;
+      --accent: #0b5d5c;
+      --accent-2: #c3682f;
+      --shadow: 0 14px 34px rgba(31, 29, 26, 0.08);
+      --radius: 18px;
+      --max: 1120px;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background: radial-gradient(1200px 800px at 20% 0%, rgba(77,214,197,.16), transparent 60%),
-                  radial-gradient(1000px 700px at 80% 20%, rgba(120,140,255,.14), transparent 55%),
-                  var(--bg);
-      color:var(--text);
-      line-height:1.6;
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+
+    body {
+      font-family: "Sora", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(11, 93, 92, 0.14), transparent 38%),
+        radial-gradient(circle at 90% 20%, rgba(195, 104, 47, 0.12), transparent 44%),
+        linear-gradient(180deg, #f8f5ef 0%, #f2eee7 100%);
+      line-height: 1.6;
+      overflow-x: hidden;
     }
-    a{color:var(--accent); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:980px; margin:0 auto; padding:42px 20px 64px}
-    header{
-      display:flex; gap:18px; align-items:flex-start; justify-content:space-between;
-      margin-bottom:22px;
+
+    .wrap {
+      width: min(92%, var(--max));
+      margin: 0 auto;
     }
-    .title h1{margin:0; font-size:34px; letter-spacing:.2px}
-    .title p{margin:8px 0 0; color:var(--muted); max-width:70ch}
-    .badge-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
-    .badge{
-      border:1px solid var(--border);
-      background: rgba(255,255,255,0.04);
-      padding:6px 10px;
-      border-radius:999px;
-      font-size:13px;
-      color:var(--muted);
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(8px);
+      background: rgba(248, 245, 239, 0.85);
+      border-bottom: 1px solid rgba(217, 208, 195, 0.6);
+      z-index: 20;
     }
-    nav{
-      display:flex; gap:14px; flex-wrap:wrap;
-      justify-content:flex-end;
-      align-items:center;
-      margin-top:6px;
+
+    .topbar .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 42px;
+      gap: 10px;
     }
-    nav a{
-      border:1px solid var(--border);
-      background: rgba(255,255,255,0.03);
-      padding:8px 12px;
-      border-radius:12px;
-      font-size:14px;
-      color:var(--text);
+
+    .brand {
+      font-weight: 500;
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink);
     }
-    nav a:hover{background: rgba(77,214,197,0.10); text-decoration:none}
-    .grid{
-      display:grid;
-      grid-template-columns: 1.4fr .9fr;
-      gap:16px;
-      margin-top:18px;
+
+    .meta {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-align: right;
     }
-    @media (max-width: 900px){
-      header{flex-direction:column}
-      nav{justify-content:flex-start}
-      .grid{grid-template-columns:1fr}
+
+    .hero {
+      padding: 28px 0 20px;
+      animation: rise 700ms ease-out both;
+      background: transparent;
+      border: none;
+      box-shadow: none;
     }
-    .card{
-      border:1px solid var(--border);
-      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
-      border-radius:18px;
-      padding:18px 18px;
+
+    .hero-card {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: clamp(14px, 2vw, 20px);
+      background:
+        linear-gradient(135deg, rgba(11, 93, 92, 0.08), rgba(195, 104, 47, 0.06)),
+        rgba(255, 253, 250, 0.95);
       box-shadow: var(--shadow);
     }
-    .card h2{
-      margin:0 0 10px;
-      font-size:18px;
-      letter-spacing:.2px;
+
+    .eyebrow {
+      display: inline-block;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(11, 93, 92, 0.08);
+      border: 1px solid rgba(11, 93, 92, 0.22);
+      border-radius: 999px;
+      padding: 8px 12px;
+      margin-bottom: 18px;
     }
-    .card p{margin:0 0 10px; color:var(--muted)}
-    ul{margin:10px 0 0; padding-left:18px; color:var(--muted)}
-    li{margin:6px 0}
-    .two-col{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:12px;
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.6rem, 3.6vw, 2.6rem);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      max-width: 20ch;
+      font-weight: 800;
     }
-    @media (max-width: 520px){
-      .two-col{grid-template-columns:1fr}
+
+    .hero-subtitle {
+      margin: 14px 0 0;
+      font-size: clamp(1rem, 2.1vw, 1.3rem);
+      color: #2e2b26;
+      font-weight: 400;
     }
-    .pill{
-      display:inline-block;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,0.03);
-      padding:6px 10px;
-      border-radius:999px;
-      margin:6px 6px 0 0;
-      font-size:13px;
-      color:var(--muted);
+
+    .lead {
+      max-width: 72ch;
+      margin: 18px 0 24px;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      font-weight: 400;
     }
-    footer{
-      margin-top:18px;
-      color:rgba(232,238,252,.65);
-      font-size:13px;
-      text-align:center;
+
+    .cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
     }
-    .cta{
-      display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;
+
+    .btn {
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-weight: 600;
+      border: 1px solid transparent;
+      transition: transform 180ms ease, background 180ms ease;
     }
-    .btn{
-      display:inline-block;
-      padding:10px 12px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background: rgba(77,214,197,0.12);
-      color:var(--text);
-      font-weight:600;
+
+    .btn.primary {
+      background: var(--accent);
+      color: #fff;
     }
-    .btn.secondary{background: rgba(255,255,255,0.04)}
-    .btn:hover{text-decoration:none; filter:brightness(1.05)}
-    code.inline{
-      background: rgba(255,255,255,0.06);
-      border:1px solid var(--border);
-      padding:2px 6px;
-      border-radius:8px;
-      color:var(--text);
-      font-size: 0.95em;
+
+    .btn.secondary {
+      border-color: var(--line);
+      color: var(--ink);
+      background: rgba(255, 253, 250, 0.9);
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    section {
+      margin: 24px 0;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: clamp(20px, 2.6vw, 30px);
+      animation: fade 550ms ease both;
+    }
+
+    .section-title {
+      margin: 0 0 12px;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-family: "IBM Plex Mono", monospace;
+      color: #504b43;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .stat {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: linear-gradient(180deg, #fffdfa, #f9f5ef);
+      padding: 14px;
+    }
+
+    a.stat-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+      border-radius: 14px;
+    }
+
+    a.stat-link:hover .stat {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(31, 29, 26, 0.08);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.35rem;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 10px;
+    }
+
+    .chip {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 0.86rem;
+      background: #fff;
+    }
+
+    .timeline-item {
+      border-top: 1px dashed var(--line);
+      padding-top: 16px;
+      margin-top: 16px;
+    }
+
+    .timeline-item:first-of-type {
+      border-top: none;
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    .role {
+      margin: 0;
+      font-size: 1.08rem;
+    }
+
+    .period {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.1rem;
+    }
+
+    li + li { margin-top: 8px; }
+
+    footer {
+      text-align: center;
+      padding: 28px 0 36px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 860px) {
+      .grid { grid-template-columns: 1fr; }
+      .topbar .wrap { justify-content: space-between; padding: 4px 0; }
+      .meta { text-align: left; }
     }
   </style>
 </head>
-
 <body>
-  <div class="wrap">
-    <header>
-      <div class="title">
-        <h1>Ashok Kumar Pyaram</h1>
-        <p>
-          AIML + Kafka Engineer focused on building reliable, high-throughput streaming and data platforms.
-          I design and deliver cloud-native solutions using Kafka/Confluent, Kubernetes, Terraform, and modern data engineering patterns.
+  <header class="topbar">
+    <div class="wrap">
+      <div class="brand">Ashok Kumar Pyaram</div>
+      <div class="meta">AI/ML Principal Engineer • Greater Atlanta, GA, USA</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-card">
+        <span class="eyebrow">NLP • GENAI • MLOPS • Spark • Kafka</span>
+        <p class="hero-subtitle">AI/ML Principal Engineer: NLP, GenAI, Applied ML, MLOps, Spark, Kafka</p>
+        <p class="lead">
+          AI/ML engineering leader with 19+ years across applied ML, deep learning, streaming data platforms, and governed analytics.
+          Specialized in Kafka + Spark ecosystems, LLM/RAG workflows, and production-grade MLOps with measurable business impact.
         </p>
-
-        <div class="badge-row">
-          <span class="badge">Kafka Engineering • Data Engineering</span>
-          <span class="badge">Confluent Certified Developer</span>
-          <span class="badge">AWS Solutions Architect (Certified)</span>
-          <span class="badge">AIML (BITS WILP)</span>
-        </div>
-      </div>
-
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <!-- Optional: link to your resume PDF if you add it to repo -->
-        <!-- <a href="resume.pdf">Resume</a> -->
-      </nav>
-    </header>
-
-    <section class="grid">
-      <div class="card" id="about">
-        <h2>About</h2>
-        <p>
-          I’m a streaming-platform and data engineer with deep hands-on experience in <strong>Apache Kafka</strong> and the
-          <strong>Confluent ecosystem</strong> (Schema Registry, RBAC/ACLs, Connect, KSQL/Streams, Control Center).
-          I’ve led and contributed to large-scale data integration and migration programs, building resilient pipelines
-          from operational sources into analytics platforms.
-        </p>
-        <p>
-          My current focus is combining strong data-engineering fundamentals with <strong>AI/ML</strong>—from feature pipelines and
-          search/retrieval concepts to practical ML systems. I value reproducibility, clear architecture, and measurable reliability.
-        </p>
-
         <div class="cta">
-          <!-- Replace # with your real links -->
-          <a class="btn" href="https://github.com/ashokpyaram-aiml/mypage" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn secondary" href="https://www.linkedin.com/in/ashokpyaram/" target="_blank" rel="noopener">LinkedIn (ashokpyaram)</a>
-          <a class="btn secondary" href="#contact">Contact</a>
+          <a class="btn primary" href="mailto:Pyaramashok@outlook.com">Email</a>
+          <a class="btn secondary" href="tel:+14704493231">Call +1 470 449 3231</a>
         </div>
       </div>
-
-      <aside class="card">
-        <h2>Quick Highlights</h2>
-        <ul>
-          <li>Kafka platform design, governance, and operations (topics, RBAC/ACLs, Schema Registry, monitoring)</li>
-          <li>Kafka Connect (managed + self-managed) and custom connector/SMT development</li>
-          <li>Kubernetes deployments (AKS) and automation with <code class="inline">Terraform</code> pipelines</li>
-          <li>Cloud-native integration patterns, reliability, observability, and scaling</li>
-          <li>Actively upskilling in AIML (BITS WILP) with interest in IR/search + RL + ML systems</li>
-        </ul>
-      </aside>
     </section>
 
-    <section class="grid" style="margin-top:16px;">
-      <div class="card" id="skills">
-        <h2>Core Skills</h2>
-        <div class="two-col">
-          <div>
-            <p><strong>Streaming & Data Platforms</strong></p>
-            <span class="pill">Apache Kafka</span>
-            <span class="pill">Confluent Cloud</span>
-            <span class="pill">Kafka Connect</span>
-            <span class="pill">Kafka Streams</span>
-            <span class="pill">KSQL/ksqldb</span>
-            <span class="pill">Schema Registry (Avro)</span>
-            <span class="pill">RBAC / ACLs</span>
-            <span class="pill">Control Center</span>
+    <section>
+      <h2 class="section-title">Projects</h2>
+      <div class="grid">
+        <a class="stat-link" href="projects/incident-intelligence.html">
+          <div class="stat">
+            <strong>Real-Time Log Incident Intelligence Platform</strong>
+            Built a centralized Kafka + Spark + ML/LLM platform for anomaly detection, incident clustering, severity prediction, and RCA-assisted summaries.
           </div>
-          <div>
-            <p><strong>Cloud, DevOps & Engineering</strong></p>
-            <span class="pill">Kubernetes (AKS)</span>
-            <span class="pill">Terraform</span>
-            <span class="pill">Python</span>
-            <span class="pill">Spring Boot</span>
-            <span class="pill">CI/CD Automation</span>
-            <span class="pill">Monitoring & Alerting</span>
-            <span class="pill">Data Governance</span>
+        </a>
+        <a class="stat-link" href="projects/signal-hub-identity-linkage.html">
+          <div class="stat">
+            <strong>Signal Hub & Identity Linkage</strong>
+            Designed deep learning embedding workflows for entity resolution, identity linkage, risk scoring, and fraud-network intelligence across enterprise datasets.
           </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <h2>Connectors & Integrations</h2>
-        <p>Experience working with a range of sources/sinks and enterprise systems, including:</p>
-        <div>
-          <span class="pill">Postgres</span>
-          <span class="pill">Snowflake</span>
-          <span class="pill">Salesforce</span>
-          <span class="pill">Couchbase</span>
-          <span class="pill">Google Docs</span>
-          <span class="pill">Custom Connectors</span>
-        </div>
+        </a>
+        <a class="stat-link" href="projects/amundsen-metadata-lineage.html">
+          <div class="stat">
+            <strong>Amundsen Metadata Discovery & Lineage</strong>
+            Engineered enterprise metadata search using BM25 tuning, synonym expansion, fuzzy matching, and vector-aware discovery for high-relevance results.
+          </div>
+        </a>
+        <a class="stat-link" href="projects/enterprise-kafka-streaming.html">
+          <div class="stat">
+            <strong>Enterprise Kafka Streaming Integration</strong>
+            Delivered Confluent platform integrations across CDC, MQ, Salesforce, S3, and Snowflake with secure, high-throughput, low-latency architecture.
+          </div>
+        </a>
       </div>
     </section>
 
-    <section class="card" id="projects" style="margin-top:16px;">
-      <h2>Featured Work</h2>
-      <p>
-        Below are example project areas you can list. Replace text with your actual resume/project details and add links to repos.
-      </p>
-      <ul>
-        <li>
-          <strong>Confluent Platform Automation with Terraform</strong> — Provisioned clusters, topics, RBAC/ACLs, Schema Registry, and connectors using repeatable pipelines.
-          <em> (Add repo link)</em>
-        </li>
-        <li>
-          <strong>Self-managed Connect on Kubernetes (AKS)</strong> — Deployed CFK-based connector runtimes, monitoring/alerting, and containerized producers/consumers.
-          <em> (Add repo link)</em>
-        </li>
-        <li>
-          <strong>Custom SMT / Validation Layer</strong> — Implemented transformations (e.g., JSON → Avro), error handling, and dynamic data validation for robust ingestion.
-          <em> (Add repo link)</em>
-        </li>
-        <li>
-          <strong>AIML Coursework & Experiments</strong> — Building foundations in ML systems, IR/search, RL, and applied modeling with reproducible notebooks.
-          <em> (Add repo link)</em>
-        </li>
-      </ul>
+    <section>
+      <h2 class="section-title">Core Skills</h2>
+      <div class="chips">
+        <span class="chip">Python</span><span class="chip">Java</span><span class="chip">Scala</span><span class="chip">SQL</span>
+        <span class="chip">TensorFlow</span><span class="chip">PyTorch</span><span class="chip">scikit-learn</span><span class="chip">Spark MLlib</span>
+        <span class="chip">LLMs</span><span class="chip">RAG</span><span class="chip">Embeddings</span><span class="chip">FAISS</span>
+        <span class="chip">Kafka</span><span class="chip">Spark Streaming</span><span class="chip">Flink</span><span class="chip">Kafka Connect</span>
+        <span class="chip">MLflow</span><span class="chip">CI/CD</span><span class="chip">Kubernetes</span><span class="chip">Terraform</span>
+        <span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">Snowflake</span><span class="chip">Elasticsearch</span>
+      </div>
     </section>
 
-    <section class="grid" style="margin-top:16px;">
-      <div class="card" id="contact">
-        <h2>Contact</h2>
+    <section>
+      <h2 class="section-title">Recent Experience</h2>
 
+      <article class="timeline-item">
+        <h3 class="role">Optum, Alpharetta - Real-Time Incident Detection & RCA Platform</h3>
+        <span class="period">Jan 2024 - Present</span>
         <ul>
-          <li>Email: <a href="mailto:your.email@example.com">pyaramashok@outlook.com</a></li>
-          <li>LinkedIn: <a href="#" target="_blank" rel="noopener">https://www.linkedin.com/in/ashokpyaram/</a></li>
-          <li>GitHub: <a href="https://github.com/royalnestgit" target="_blank" rel="noopener">github.com/ashokpyaram-aiml</a></li>
+          <li>Built end-to-end realtime log ingestion and correlation pipeline using Kafka and Spark Structured Streaming.</li>
+          <li>Developed anomaly detection and severity classification models with TensorFlow, Keras, PyTorch, and scikit-learn.</li>
+          <li>Implemented LLM-assisted summarization and RCA recommendations with human-in-the-loop controls.</li>
         </ul>
-      </div>
+      </article>
 
-      <div class="card">
-        <h2>What I’m Exploring</h2>
+      <article class="timeline-item">
+        <h3 class="role">Experian, Alpharetta - Signal Hub & Identity Linkage</h3>
+        <span class="period">Feb 2022 - Jan 2024</span>
         <ul>
-          <li>ML systems fundamentals and scalable feature/data pipelines</li>
-          <li>Information Retrieval & Search (ranking, indexing, evaluation)</li>
-          <li>Streaming-first architectures for real-time ML</li>
-          <li>Observability: metrics, SLOs, and performance tuning for Kafka</li>
+          <li>Designed entity-resolution pipelines integrating enterprise credit, fraud, and identity datasets.</li>
+          <li>Built embedding-based deep learning models for customer/address similarity and fraud-network discovery.</li>
+          <li>Delivered credit-risk and anomaly models, REST APIs, and optimized NoSQL/RDBMS models for large-scale retrieval.</li>
         </ul>
-      </div>
+      </article>
+
+      <article class="timeline-item">
+        <h3 class="role">Danske Bank - Enterprise Kafka Streaming</h3>
+        <span class="period">Feb 2021 - Jan 2022</span>
+        <ul>
+          <li>Delivered Confluent-based mission-critical streaming platform with tuning for throughput, latency, and resiliency.</li>
+          <li>Integrated Debezium CDC, IBM MQ, Salesforce, S3, and Snowflake with secure SSL/OAuth architecture.</li>
+        </ul>
+      </article>
+
+      <article class="timeline-item">
+        <h3 class="role">Fidelity Investments (USA) - Streaming, Risk & Analytics Platforms</h3>
+        <span class="period">May 2012 - Jan 2021</span>
+        <ul>
+          <li>Built phishing risk and detection analytics using Hadoop, Hive, Spark, Kafka, Tableau, and Power BI.</li>
+          <li>Delivered enterprise event streaming and workflow orchestration integrating Confluent Cloud, ServiceNow, and microservices.</li>
+          <li>Developed cybersecurity reporting and analytics pipelines to improve operational visibility and decision support.</li>
+        </ul>
+      </article>
     </section>
 
-    <footer>
-      © <span id="y"></span> Ashok Kumar Pyaram • Built with GitHub Pages
-    </footer>
-  </div>
+    <section>
+      <h2 class="section-title">Education & Certifications</h2>
+      <p><strong>M.Tech in AI &amp; ML (WILP)</strong>, BITS Pilani — In Progress</p>
+      <p><strong>B.Tech in EEE</strong>, Intel Engineering College (JNTU), 2005</p>
+      <div class="chips">
+        <span class="chip">GenAI Certified Specialist</span>
+        <span class="chip">Confluent Certified Developer</span>
+        <span class="chip">AWS Solutions Architect Associate</span>
+        <span class="chip">Oracle BI Implementation Specialist</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Ashok Kumar Pyaram • Built for GitHub Pages</div>
+  </footer>
 
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
