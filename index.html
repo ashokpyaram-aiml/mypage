@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ashok Kumar Pyaram | AI/ML Solution Engineer</title>
   <meta name="description" content="Portfolio and profile of Ashok Kumar Pyaram, AI/ML Solution Engineer specializing in NLP, GenAI, Agentic AI, MLOps, Kafka, and Spark." />
+  <meta property="og:title" content="Ashok Kumar Pyaram | AI/ML Solution Engineer" />
+  <meta property="og:description" content="AI/ML, GenAI, RAG, MLOps, Kafka, and Spark portfolio with enterprise project impact across Optum, Experian, Danske Bank, and Fidelity Investments." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Ashok Kumar Pyaram | AI/ML Solution Engineer" />
+  <meta name="twitter:description" content="AI/ML, GenAI, RAG, MLOps, Kafka, and Spark portfolio with enterprise project impact." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
@@ -129,6 +135,14 @@
       font-weight: 400;
     }
 
+    .target-roles {
+      max-width: 72ch;
+      margin: -8px 0 22px;
+      color: #3f3b35;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
     .cta {
       display: flex;
       flex-wrap: wrap;
@@ -183,6 +197,28 @@
       display: grid;
       gap: 18px;
       margin-top: 18px;
+    }
+
+    .impact-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .impact-list li {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: linear-gradient(180deg, #fffdfa, #f9f5ef);
+      padding: 12px 14px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .impact-list strong {
+      color: var(--accent);
     }
 
     .project-category {
@@ -369,6 +405,7 @@
     @media (max-width: 860px) {
       .topbar .wrap { justify-content: space-between; padding: 4px 0; }
       .meta { text-align: left; }
+      .impact-list { grid-template-columns: 1fr; }
       .project-row,
       .project-table-head {
         grid-template-columns: 1fr;
@@ -396,9 +433,10 @@
         <h1>AI/ML Solution Engineer</h1>
         <p class="hero-subtitle">NLP, GenAI, Applied ML, Agentic AI, MLOps, Spark, Kafka</p>
         <p class="lead">
-          AI/ML engineering leader with 19+ years delivering AI, ML, advanced analytics, realtime data engineering, and production AI systems.
+          Hands-on AI/ML solution engineer with 19+ years delivering AI, ML, advanced analytics, realtime data engineering, and production AI systems.
           Specialized in Azure OpenAI, RAG, Agentic AI, Kafka + Spark ecosystems, LLM workflows, and enterprise MLOps.
         </p>
+        <p class="target-roles">Target roles: AI/ML Solution Engineer, GenAI/RAG Engineer, MLOps Engineer, Kafka/Spark Data Engineer.</p>
         <div class="cta">
           <a class="btn primary" href="mailto:pyaramashokjob@gmail.com">Email</a>
           <a class="btn secondary" href="tel:+14704493231">Call +1 470 449 3231</a>
@@ -406,6 +444,16 @@
           <a class="btn secondary" href="https://www.linkedin.com/in/ashokpyaram/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Top Impact</h2>
+      <ul class="impact-list">
+        <li><strong>Incident intelligence:</strong> improved MTTD by 35% and reduced MTTR by 25-30% using Kafka, Spark MLlib, LLM summaries, and RCA workflows.</li>
+        <li><strong>Streaming automation:</strong> reduced Kafka deployment time by 50% and manual errors by 90% with Terraform, governance, and connector automation.</li>
+        <li><strong>Security ML:</strong> improved phishing identification by 40% and reduced phishing incidents by 30% using Kafka, Spark, NLP, and employee risk scoring.</li>
+        <li><strong>Metadata intelligence:</strong> reduced dataset discovery time by 40% with Amundsen, RAG-style retrieval, BM25 tuning, Snowflake, and Neo4j lineage.</li>
+      </ul>
     </section>
 
     <section>
@@ -423,13 +471,13 @@
           </div>
           <a class="project-row" href="projects/aiml-log-analytics.html">
             <span><span class="project-name">AI/ML Log Analytics Project</span><span class="project-label">Operational intelligence</span></span>
-            <span class="project-copy">Anomaly detection, alert correlation, incident prioritization, embeddings, and LLM-assisted operational summaries from high-volume event streams.</span>
-            <span class="project-tools">GenAI, NLP, LLMs, Embeddings, Spark, Kafka, MLflow, MLOps</span>
+            <span class="project-copy">Log intelligence platform for anomaly detection, alert correlation, incident prioritization, embedding search, and LLM-assisted operational summaries.</span>
+            <span class="project-tools">GenAI, NLP, LLMs, Embeddings, Spark, Kafka, MLflow, Drift Monitoring, MLOps</span>
           </a>
           <a class="project-row" href="projects/incident-intelligence.html">
             <span><span class="project-name">Real-Time Log Incident Intelligence Platform</span><span class="project-label">Incident detection and RCA</span></span>
-            <span class="project-copy">Kafka and Spark ML platform for anomaly detection, incident clustering, severity classification, and RCA-assisted summaries.</span>
-            <span class="project-tools">LLMs, Spark MLlib, Kafka, LangChain, MLflow, Kubernetes, RCA</span>
+            <span class="project-copy">Kafka and Spark ML platform for anomaly detection, clustering, severity classification, RCA summaries, and human-in-the-loop remediation.</span>
+            <span class="project-tools">LLMs, Spark MLlib, Kafka, LangChain, MLflow, Kubernetes, Classification, Clustering, RCA</span>
           </a>
           <a class="project-row" href="projects/signal-hub-identity-linkage.html">
             <span><span class="project-name">Signal Hub &amp; Identity Linkage</span><span class="project-label">Risk and entity intelligence</span></span>
@@ -438,7 +486,7 @@
           </a>
           <a class="project-row" href="projects/phishing-risk-detection.html">
             <span><span class="project-name">Phishing Risk Management &amp; Detection</span><span class="project-label">Security ML</span></span>
-            <span class="project-copy">Realtime email data pipelines with Spark feature engineering, NLP-based classification, risk scoring, and training workflows.</span>
+            <span class="project-copy">Realtime email data pipelines with Spark feature engineering, NLP-based classification, employee risk scoring, and targeted training workflows.</span>
             <span class="project-tools">Kafka, Spark, Scala, NLP, Machine Learning, Risk Scoring</span>
           </a>
           <a class="project-row" href="projects/amundsen-metadata-lineage.html">
