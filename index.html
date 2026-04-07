@@ -311,6 +311,24 @@
       padding-top: 0;
     }
 
+    .role-heading {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .company-logo {
+      width: 76px;
+      height: 30px;
+      object-fit: contain;
+      padding: 4px 6px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      flex: 0 0 auto;
+      box-shadow: 0 4px 10px rgba(31, 29, 26, 0.08);
+    }
+
     .role {
       margin: 0;
       font-size: 1.08rem;
@@ -384,6 +402,8 @@
         <div class="cta">
           <a class="btn primary" href="mailto:pyaramashokjob@gmail.com">Email</a>
           <a class="btn secondary" href="tel:+14704493231">Call +1 470 449 3231</a>
+          <a class="btn secondary" href="https://1drv.ms/w/c/43ce12525efd485a/IQCpU_Fh7rI8S6FrhcSvoYyiAeV3YlLLheQ8gFixRhv9_ZQ?e=jko3Yg" target="_blank" rel="noopener noreferrer">Resume</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/ashokpyaram/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
     </section>
@@ -526,7 +546,10 @@
       <h2 class="section-title">Recent Experience</h2>
 
       <article class="timeline-item">
-        <h3 class="role">Softech International Inc - AI/ML Log Analytics Project</h3>
+        <div class="role-heading">
+          <img class="company-logo" src="assets/logo-softech.png" alt="Softech International logo" />
+          <h3 class="role">Softech International Inc - AI/ML Log Analytics Project</h3>
+        </div>
         <span class="period">Feb 2026 - Present</span>
         <ul>
           <li>Building AI/ML-driven log analytics capabilities for operational intelligence, anomaly detection, alert correlation, and incident prioritization.</li>
@@ -536,7 +559,10 @@
       </article>
 
       <article class="timeline-item">
-        <h3 class="role">Optum, Alpharetta | Softech International Inc - Real-Time Incident Detection &amp; RCA Platform</h3>
+        <div class="role-heading">
+          <img class="company-logo" src="assets/logo-optum.svg" alt="Optum logo" />
+          <h3 class="role">Optum, Alpharetta | Softech International Inc - Real-Time Incident Detection &amp; RCA Platform</h3>
+        </div>
         <span class="period">Jan 2024 - Jan 2026</span>
         <ul>
           <li>Built a realtime log analytics platform using Kafka, Spark MLlib, and LLM-driven reasoning for incident intelligence.</li>
@@ -546,7 +572,10 @@
       </article>
 
       <article class="timeline-item">
-        <h3 class="role">Experian, Alpharetta | Softech International Inc - Signal Hub &amp; Identity Linkage</h3>
+        <div class="role-heading">
+          <img class="company-logo" src="assets/logo-experian.svg" alt="Experian logo" />
+          <h3 class="role">Experian, Alpharetta | Softech International Inc - Signal Hub &amp; Identity Linkage</h3>
+        </div>
         <span class="period">Feb 2022 - Jan 2024</span>
         <ul>
           <li>Designed entity-resolution pipelines integrating enterprise credit, fraud, and identity datasets.</li>
@@ -556,7 +585,10 @@
       </article>
 
       <article class="timeline-item">
-        <h3 class="role">Danske Bank | Coforge - Enterprise Kafka Streaming</h3>
+        <div class="role-heading">
+          <img class="company-logo" src="assets/logo-danske.svg" alt="Danske Bank logo" />
+          <h3 class="role">Danske Bank | Coforge - Enterprise Kafka Streaming</h3>
+        </div>
         <span class="period">Feb 2021 - Jan 2022</span>
         <ul>
           <li>Delivered Confluent Platform and Confluent Cloud streaming for mission-critical financial workflows.</li>
@@ -565,7 +597,10 @@
       </article>
 
       <article class="timeline-item">
-        <h3 class="role">Fidelity Investments | Infosys - Streaming, Risk &amp; Analytics Platforms</h3>
+        <div class="role-heading">
+          <img class="company-logo" src="assets/logo-fidelity.png" alt="Fidelity Investments logo" />
+          <h3 class="role">Fidelity Investments | Infosys - Streaming, Risk &amp; Analytics Platforms</h3>
+        </div>
         <span class="period">May 2012 - Jan 2021</span>
         <ul>
           <li>Built phishing risk and detection analytics using Hadoop, Hive, Spark, Kafka, Tableau, and Power BI.</li>
