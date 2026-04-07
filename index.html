@@ -84,7 +84,7 @@
     .hero-card {
       border: 1px solid var(--line);
       border-radius: 22px;
-      padding: clamp(14px, 2vw, 20px);
+      padding: clamp(18px, 2.4vw, 28px);
       background:
         linear-gradient(135deg, rgba(11, 93, 92, 0.08), rgba(195, 104, 47, 0.06)),
         rgba(255, 253, 250, 0.95);
@@ -107,25 +107,25 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(1.6rem, 3.6vw, 2.6rem);
-      line-height: 1.08;
+      font-size: clamp(1.7rem, 2.8vw, 2.25rem);
+      line-height: 1.12;
       letter-spacing: -0.02em;
-      max-width: 20ch;
+      max-width: 26ch;
       font-weight: 800;
     }
 
     .hero-subtitle {
-      margin: 14px 0 0;
-      font-size: clamp(1rem, 2.1vw, 1.3rem);
+      margin: 12px 0 0;
+      font-size: clamp(0.98rem, 1.7vw, 1.12rem);
       color: #2e2b26;
-      font-weight: 400;
+      font-weight: 600;
     }
 
     .lead {
       max-width: 72ch;
-      margin: 18px 0 24px;
+      margin: 16px 0 22px;
       color: var(--muted);
-      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      font-size: clamp(0.95rem, 1.45vw, 1.05rem);
       font-weight: 400;
     }
 
@@ -179,37 +179,109 @@
       color: #504b43;
     }
 
-    .grid {
+    .project-matrix {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 18px;
+      margin-top: 18px;
     }
 
-    .stat {
+    .project-category {
       border: 1px solid var(--line);
       border-radius: 14px;
       background: linear-gradient(180deg, #fffdfa, #f9f5ef);
-      padding: 14px;
+      overflow: hidden;
     }
 
-    a.stat-link {
+    .project-category-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      padding: 14px 16px;
+      background: #0b5d5c;
+      color: #fff;
+    }
+
+    .project-category-title {
+      margin: 0;
+      font-size: 0.95rem;
+      font-family: "IBM Plex Mono", monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .project-category-count {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.78rem;
+      opacity: 0.82;
+    }
+
+    .project-row,
+    .project-table-head {
+      display: grid;
+      grid-template-columns: 1.15fr 1.85fr 1.25fr;
+      gap: 18px;
+      align-items: start;
+      padding: 15px 16px;
+    }
+
+    .project-table-head {
+      border-top: 1px solid rgba(217, 208, 195, 0.72);
+      color: #504b43;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(255, 253, 250, 0.78);
+    }
+
+    .project-row {
       text-decoration: none;
       color: inherit;
-      display: block;
-      transition: transform 180ms ease, box-shadow 180ms ease;
-      border-radius: 14px;
+      border-top: 1px solid rgba(217, 208, 195, 0.72);
+      background: rgba(255, 253, 250, 0.7);
+      transition: background 180ms ease, transform 180ms ease;
     }
 
-    a.stat-link:hover .stat {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(31, 29, 26, 0.08);
+    .project-row:nth-of-type(odd) {
+      background: rgba(248, 245, 239, 0.68);
     }
 
-    .stat strong {
-      display: block;
-      font-size: 1.35rem;
+    .project-row:hover {
+      background: rgba(11, 93, 92, 0.07);
+      transform: translateY(-1px);
+    }
+
+    .project-name {
+      font-weight: 700;
       color: var(--accent);
-      margin-bottom: 4px;
+    }
+
+    .project-label {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 0.76rem;
+    }
+
+    .project-copy,
+    .project-tools {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.55;
+    }
+
+    .project-tools {
+      color: #355f5d;
+      font-weight: 700;
+    }
+
+    .coursework {
+      margin: 4px 0 18px 18px;
+      max-width: 78ch;
+      color: var(--muted);
+      font-size: 0.95rem;
     }
 
     .chips {
@@ -277,9 +349,17 @@
     }
 
     @media (max-width: 860px) {
-      .grid { grid-template-columns: 1fr; }
       .topbar .wrap { justify-content: space-between; padding: 4px 0; }
       .meta { text-align: left; }
+      .project-row,
+      .project-table-head {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .project-table-head {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -295,7 +375,8 @@
     <section class="hero">
       <div class="hero-card">
         <span class="eyebrow">NLP • GENAI • Agentic AI • MLOPS • Spark • Kafka</span>
-        <p class="hero-subtitle">AI/ML Solution Engineer: NLP, GenAI, Applied ML, Agentic AI, MLOps, Spark, Kafka</p>
+        <h1>AI/ML Solution Engineer</h1>
+        <p class="hero-subtitle">NLP, GenAI, Applied ML, Agentic AI, MLOps, Spark, Kafka</p>
         <p class="lead">
           AI/ML engineering leader with 19+ years delivering AI, ML, advanced analytics, realtime data engineering, and production AI systems.
           Specialized in Azure OpenAI, RAG, Agentic AI, Kafka + Spark ecosystems, LLM workflows, and enterprise MLOps.
@@ -309,31 +390,122 @@
 
     <section>
       <h2 class="section-title">Projects</h2>
-      <div class="grid">
-        <a class="stat-link" href="projects/incident-intelligence.html">
-          <div class="stat">
-            <strong>Real-Time Log Incident Intelligence Platform</strong>
-            Built a centralized Kafka + Spark ML/LLM platform for anomaly detection, incident clustering, severity classification, and RCA-assisted summaries.
+      <div class="project-matrix">
+        <div class="project-category">
+          <div class="project-category-header">
+            <h3 class="project-category-title">AI/ML</h3>
+            <span class="project-category-count">5 projects</span>
           </div>
-        </a>
-        <a class="stat-link" href="projects/signal-hub-identity-linkage.html">
-          <div class="stat">
-            <strong>Signal Hub & Identity Linkage</strong>
-            Designed ML and deep learning workflows for entity resolution, identity linkage, customer vectors, credit risk scoring, and fraud-network intelligence.
+          <div class="project-table-head">
+            <span>Project</span>
+            <span>Project Description</span>
+            <span>Key Tools / Keywords</span>
           </div>
-        </a>
-        <a class="stat-link" href="projects/amundsen-metadata-lineage.html">
-          <div class="stat">
-            <strong>Amundsen Metadata Discovery & Lineage</strong>
-            Engineered enterprise metadata search and lineage with BM25 tuning, query rewriting, synonym expansion, fuzzy matching, Snowflake, and Neo4j.
+          <a class="project-row" href="projects/aiml-log-analytics.html">
+            <span><span class="project-name">AI/ML Log Analytics Project</span><span class="project-label">Operational intelligence</span></span>
+            <span class="project-copy">Anomaly detection, alert correlation, incident prioritization, embeddings, and LLM-assisted operational summaries from high-volume event streams.</span>
+            <span class="project-tools">GenAI, NLP, LLMs, Embeddings, Spark, Kafka, MLflow, MLOps</span>
+          </a>
+          <a class="project-row" href="projects/incident-intelligence.html">
+            <span><span class="project-name">Real-Time Log Incident Intelligence Platform</span><span class="project-label">Incident detection and RCA</span></span>
+            <span class="project-copy">Kafka and Spark ML platform for anomaly detection, incident clustering, severity classification, and RCA-assisted summaries.</span>
+            <span class="project-tools">LLMs, Spark MLlib, Kafka, LangChain, MLflow, Kubernetes, RCA</span>
+          </a>
+          <a class="project-row" href="projects/signal-hub-identity-linkage.html">
+            <span><span class="project-name">Signal Hub &amp; Identity Linkage</span><span class="project-label">Risk and entity intelligence</span></span>
+            <span class="project-copy">Entity resolution, customer vectors, address embeddings, credit risk scoring, and fraud-network analysis.</span>
+            <span class="project-tools">TensorFlow, Keras, Spark MLlib, Kafka, scikit-learn, Embeddings</span>
+          </a>
+          <a class="project-row" href="projects/phishing-risk-detection.html">
+            <span><span class="project-name">Phishing Risk Management &amp; Detection</span><span class="project-label">Security ML</span></span>
+            <span class="project-copy">Realtime email data pipelines with Spark feature engineering, NLP-based classification, risk scoring, and training workflows.</span>
+            <span class="project-tools">Kafka, Spark, Scala, NLP, Machine Learning, Risk Scoring</span>
+          </a>
+          <a class="project-row" href="projects/amundsen-metadata-lineage.html">
+            <span><span class="project-name">Amundsen RAG Metadata Discovery &amp; Lineage</span><span class="project-label">RAG search and lineage intelligence</span></span>
+            <span class="project-copy">RAG-enabled enterprise metadata discovery with semantic retrieval, relevance tuning, lineage visibility, and governance adoption.</span>
+            <span class="project-tools">RAG, Embeddings, Amundsen, Elasticsearch, Python, BM25, Query Rewriting, Snowflake, Neo4j</span>
+          </a>
+        </div>
+
+        <div class="project-category">
+          <div class="project-category-header">
+            <h3 class="project-category-title">Kafka</h3>
+            <span class="project-category-count">6 projects</span>
           </div>
-        </a>
-        <a class="stat-link" href="projects/enterprise-kafka-streaming.html">
-          <div class="stat">
-            <strong>Enterprise Kafka Streaming Integration</strong>
-            Delivered Confluent Cloud integrations across Debezium CDC, MQ, Salesforce, S3, and Snowflake with secure, high-throughput streaming architecture.
+          <div class="project-table-head">
+            <span>Project</span>
+            <span>Project Description</span>
+            <span>Key Tools / Keywords</span>
           </div>
-        </a>
+          <a class="project-row" href="projects/enterprise-kafka-streaming.html">
+            <span><span class="project-name">Enterprise Kafka Streaming Integration</span><span class="project-label">Financial streaming platform</span></span>
+            <span class="project-copy">Confluent Platform and Confluent Cloud integrations across CDC, MQ, Salesforce, S3, and Snowflake with secure high-throughput streaming.</span>
+            <span class="project-tools">Confluent Cloud, Kafka Connect, Debezium, IBM MQ, Snowflake, Prometheus, Grafana</span>
+          </a>
+          <a class="project-row" href="projects/centralised-data-streaming.html">
+            <span><span class="project-name">Centralised Data Streaming Platform</span><span class="project-label">Enterprise streaming platform</span></span>
+            <span class="project-copy">Realtime data transfer, connector onboarding, governance, data lake ingestion, and infrastructure automation.</span>
+            <span class="project-tools">Confluent Cloud, Kafka Connect, Schema Registry, Terraform, Kubernetes, Flink, Prometheus</span>
+          </a>
+          <a class="project-row" href="projects/kafka-performance-scaling.html">
+            <span><span class="project-name">Kafka Performance Optimization &amp; Broker Scaling</span><span class="project-label">Broker tuning and observability</span></span>
+            <span class="project-copy">Broker scaling, partition rebalancing, replication tuning, producer and consumer tuning, and operational dashboards.</span>
+            <span class="project-tools">Apache Kafka, Broker Metrics, ISR, Consumer Lag, Prometheus, Grafana, Throughput Tuning</span>
+          </a>
+          <a class="project-row" href="projects/check-disbursement-screening.html">
+            <span><span class="project-name">Check Disbursement &amp; Screening</span><span class="project-label">Messaging integration</span></span>
+            <span class="project-copy">Check disbursement request screening with MQ, Kafka topics, KSQL transformations, SOAP services, SSL, and OAuth.</span>
+            <span class="project-tools">Kafka, MQ Series, KSQL, Spring Boot, Spring Cloud Stream, SOAP, SSL, OAuth</span>
+          </a>
+          <a class="project-row" href="projects/self-managed-kafka.html">
+            <span><span class="project-name">Self-Managed Kafka Real-Time Data Flow</span><span class="project-label">Cloudera Kafka operations</span></span>
+            <span class="project-copy">Self-managed Kafka infrastructure with custom SMTs, Kafka Streams validation, DLQ handling, and schema conversion.</span>
+            <span class="project-tools">Cloudera Kafka, Kafka Connect, Custom SMT, Kafka Streams, DLQ, Avro, Grafana</span>
+          </a>
+          <a class="project-row" href="projects/order-management-microservices.html">
+            <span><span class="project-name">Order Management Microservices</span><span class="project-label">Order lifecycle orchestration</span></span>
+            <span class="project-copy">Microservice order orchestration with Kafka topics, ServiceNow, APIGEE, Spring Boot, Neo4j, and dead-letter handling.</span>
+            <span class="project-tools">Confluent Cloud, Kafka, ServiceNow, APIGEE, Spring Boot, Spring Cloud Stream, Neo4j</span>
+          </a>
+        </div>
+
+        <div class="project-category">
+          <div class="project-category-header">
+            <h3 class="project-category-title">Data Engineering</h3>
+            <span class="project-category-count">5 projects</span>
+          </div>
+          <div class="project-table-head">
+            <span>Project</span>
+            <span>Project Description</span>
+            <span>Key Tools / Keywords</span>
+          </div>
+          <a class="project-row" href="projects/fidelity-sps-reporting.html">
+            <span><span class="project-name">Fidelity SPS Global Reporting</span><span class="project-label">Cloud data warehouse and BI</span></span>
+            <span class="project-copy">AWS migration with Snowflake reporting, Kafka CDC, Spark Parquet transformations, and Tableau dashboards.</span>
+            <span class="project-tools">AWS S3, AWS DMS, Snowflake, Tableau, Spark, Kafka, Oracle Goldengate, Java, Python</span>
+          </a>
+          <a class="project-row" href="projects/ecs-reporting-analytics.html">
+            <span><span class="project-name">Enterprise Cybersecurity Reporting</span><span class="project-label">Security analytics and reporting</span></span>
+            <span class="project-copy">Cybersecurity analytics using Kafka POC, Spark, Cassandra, Oracle data warehousing, dashboards, and training notifications.</span>
+            <span class="project-tools">Kafka, Spark, Scala, Cassandra, Informatica, Oracle, OBIEE, BI Publisher</span>
+          </a>
+          <a class="project-row" href="projects/workforce-information-analytics.html">
+            <span><span class="project-name">Workforce Information Analytics</span><span class="project-label">HR analytics warehouse</span></span>
+            <span class="project-copy">HR data warehouse and BI reporting with star schema modeling, ETL workflows, dashboards, and Tableau visualizations.</span>
+            <span class="project-tools">Informatica, Oracle, PL/SQL, Control-M, OBIEE, Tableau, Star Schema, JIRA</span>
+          </a>
+          <a class="project-row" href="projects/siebel-crm-data-warehouse.html">
+            <span><span class="project-name">Siebel CRM &amp; Data Warehousing</span><span class="project-label">CRM analytics and ETL</span></span>
+            <span class="project-copy">CRM analytics and warehouse optimization with ETL flows, DAC scheduling, star schemas, and slowly changing dimensions.</span>
+            <span class="project-tools">Siebel CRM, Siebel Analytics, Informatica PowerCenter, DAC, Oracle, SQL, PL/SQL</span>
+          </a>
+          <a class="project-row" href="projects/peoplesoft-erp.html">
+            <span><span class="project-name">PeopleSoft ERP Implementation</span><span class="project-label">ERP customization</span></span>
+            <span class="project-copy">PeopleSoft HR, Projects, and Finance customization with backend SQL processing and business workflow automation.</span>
+            <span class="project-tools">PeopleSoft, PeopleCode, Application Engine, PeopleSoft Queries, Oracle, SQL, PL/SQL</span>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -354,8 +526,18 @@
       <h2 class="section-title">Recent Experience</h2>
 
       <article class="timeline-item">
-        <h3 class="role">Optum, Alpharetta - Real-Time Incident Detection & RCA Platform</h3>
-        <span class="period">Jan 2024 - Present</span>
+        <h3 class="role">Softech International Inc - AI/ML Log Analytics Project</h3>
+        <span class="period">Feb 2026 - Present</span>
+        <ul>
+          <li>Building AI/ML-driven log analytics capabilities for operational intelligence, anomaly detection, alert correlation, and incident prioritization.</li>
+          <li>Applying NLP, GenAI, embeddings, and LLM-assisted summarization to convert high-volume log events into actionable incident insights.</li>
+          <li>Using Spark, Kafka, MLflow, and MLOps practices to support scalable feature engineering, model monitoring, and production inference workflows.</li>
+        </ul>
+      </article>
+
+      <article class="timeline-item">
+        <h3 class="role">Optum, Alpharetta | Softech International Inc - Real-Time Incident Detection &amp; RCA Platform</h3>
+        <span class="period">Jan 2024 - Jan 2026</span>
         <ul>
           <li>Built a realtime log analytics platform using Kafka, Spark MLlib, and LLM-driven reasoning for incident intelligence.</li>
           <li>Developed anomaly detection, incident clustering, and severity classification workflows for high-volume operational logs.</li>
@@ -364,7 +546,7 @@
       </article>
 
       <article class="timeline-item">
-        <h3 class="role">Experian, Alpharetta - Signal Hub & Identity Linkage</h3>
+        <h3 class="role">Experian, Alpharetta | Softech International Inc - Signal Hub &amp; Identity Linkage</h3>
         <span class="period">Feb 2022 - Jan 2024</span>
         <ul>
           <li>Designed entity-resolution pipelines integrating enterprise credit, fraud, and identity datasets.</li>
@@ -374,7 +556,7 @@
       </article>
 
       <article class="timeline-item">
-        <h3 class="role">Danske Bank - Enterprise Kafka Streaming</h3>
+        <h3 class="role">Danske Bank | Coforge - Enterprise Kafka Streaming</h3>
         <span class="period">Feb 2021 - Jan 2022</span>
         <ul>
           <li>Delivered Confluent Platform and Confluent Cloud streaming for mission-critical financial workflows.</li>
@@ -383,7 +565,7 @@
       </article>
 
       <article class="timeline-item">
-        <h3 class="role">Fidelity Investments (USA) - Streaming, Risk & Analytics Platforms</h3>
+        <h3 class="role">Fidelity Investments | Infosys - Streaming, Risk &amp; Analytics Platforms</h3>
         <span class="period">May 2012 - Jan 2021</span>
         <ul>
           <li>Built phishing risk and detection analytics using Hadoop, Hive, Spark, Kafka, Tableau, and Power BI.</li>
@@ -394,8 +576,14 @@
     </section>
 
     <section>
-      <h2 class="section-title">Education & Certifications</h2>
+      <h2 class="section-title">Education &amp; Certifications</h2>
       <p><strong>M.Tech in AI &amp; ML (WILP)</strong>, BITS Pilani — In Progress</p>
+      <p class="project-copy">Relevant coursework and focus areas:</p>
+      <p class="coursework">
+        MFML, Machine Learning, Statistics, Artificial Intelligence, Deep Neural Networks, Deep Reinforcement Learning,
+        Natural Language Processing, Information Retrieval, Graph Neural Networks, Conversational AI, AI/ML Robotics,
+        Unsupervised Deep Learning.
+      </p>
       <p><strong>B.Tech in EEE</strong>, Intel Engineering College (JNTU), 2005</p>
       <div class="chips">
         <span class="chip">GenAI Certified Specialist</span>

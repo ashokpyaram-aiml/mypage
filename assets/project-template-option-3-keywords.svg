@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1100" viewBox="0 0 1700 1100">
+  <defs>
+    <style>
+      .bg { fill: #eef3f1; }
+      .panel { fill: #ffffff; stroke: #cfd9d5; stroke-width: 2; }
+      .head { fill: #0b5d5c; }
+      .row { fill: #f8fbfa; stroke: #d4ded9; stroke-width: 1.5; }
+      .row2 { fill: #ffffff; stroke: #d4ded9; stroke-width: 1.5; }
+      .ink { fill: #16211f; font-family: Arial, sans-serif; }
+      .muted { fill: #60706b; font-family: Arial, sans-serif; }
+      .white { fill: #ffffff; font-family: Arial, sans-serif; }
+      .accent { fill: #0b5d5c; font-family: Arial, sans-serif; }
+    </style>
+  </defs>
+  <rect class="bg" width="1700" height="1100"/>
+  <text x="70" y="70" class="ink" font-size="36" font-weight="700">Detailed Project Matrix</text>
+  <text x="70" y="108" class="muted" font-size="21">No repeated category labels. Tools are inline resume keywords, not round chips.</text>
+  <rect x="60" y="150" width="1580" height="860" rx="10" class="panel"/>
+  <rect x="90" y="190" width="1520" height="68" rx="8" class="head"/>
+  <text x="120" y="232" class="white" font-size="18" font-weight="700">Project</text>
+  <text x="530" y="232" class="white" font-size="18" font-weight="700">Project Description</text>
+  <text x="1120" y="232" class="white" font-size="18" font-weight="700">Key Tools / Keywords</text>
+
+  <rect x="90" y="275" width="1520" height="120" rx="8" class="row"/>
+  <text x="120" y="318" class="ink" font-size="20" font-weight="700">AI/ML Log Analytics Project</text>
+  <text x="120" y="352" class="muted" font-size="15">Operational intelligence</text>
+  <text x="530" y="310" class="ink" font-size="16">Anomaly detection, alert correlation, incident prioritization,</text>
+  <text x="530" y="338" class="ink" font-size="16">embeddings, and LLM-assisted log summarization.</text>
+  <text x="1120" y="310" class="accent" font-size="16" font-weight="700">GenAI, NLP, LLMs, Embeddings, Spark,</text>
+  <text x="1120" y="338" class="accent" font-size="16" font-weight="700">Kafka, MLflow, MLOps</text>
+
+  <rect x="90" y="410" width="1520" height="120" rx="8" class="row2"/>
+  <text x="120" y="453" class="ink" font-size="20" font-weight="700">Signal Hub and Identity Linkage</text>
+  <text x="120" y="487" class="muted" font-size="15">Risk and entity intelligence</text>
+  <text x="530" y="445" class="ink" font-size="16">Entity resolution, customer vectors, address embeddings,</text>
+  <text x="530" y="473" class="ink" font-size="16">credit risk scoring, and fraud-network analysis.</text>
+  <text x="1120" y="445" class="accent" font-size="16" font-weight="700">TensorFlow, Keras, PySpark, Spark MLlib,</text>
+  <text x="1120" y="473" class="accent" font-size="16" font-weight="700">Kafka, scikit-learn, Embeddings</text>
+
+  <rect x="90" y="545" width="1520" height="120" rx="8" class="row"/>
+  <text x="120" y="588" class="ink" font-size="20" font-weight="700">Centralised Data Streaming Platform</text>
+  <text x="120" y="622" class="muted" font-size="15">Enterprise streaming platform</text>
+  <text x="530" y="580" class="ink" font-size="16">Realtime data transfer, connector onboarding, governance,</text>
+  <text x="530" y="608" class="ink" font-size="16">data lake ingestion, and infrastructure automation.</text>
+  <text x="1120" y="580" class="accent" font-size="16" font-weight="700">Confluent Cloud, Kafka Connect, Schema Registry,</text>
+  <text x="1120" y="608" class="accent" font-size="16" font-weight="700">Terraform, Kubernetes, Flink, Prometheus, Grafana</text>
+
+  <rect x="90" y="680" width="1520" height="120" rx="8" class="row2"/>
+  <text x="120" y="723" class="ink" font-size="20" font-weight="700">Kafka Performance Optimization</text>
+  <text x="120" y="757" class="muted" font-size="15">Broker tuning and observability</text>
+  <text x="530" y="715" class="ink" font-size="16">Broker scaling, partition rebalancing, replication tuning,</text>
+  <text x="530" y="743" class="ink" font-size="16">producer/consumer tuning, and operational dashboards.</text>
+  <text x="1120" y="715" class="accent" font-size="16" font-weight="700">Apache Kafka, Broker Metrics, ISR, Consumer Lag,</text>
+  <text x="1120" y="743" class="accent" font-size="16" font-weight="700">Prometheus, Grafana, Throughput Tuning</text>
+
+  <rect x="90" y="815" width="1520" height="120" rx="8" class="row"/>
+  <text x="120" y="858" class="ink" font-size="20" font-weight="700">Fidelity SPS Global Reporting</text>
+  <text x="120" y="892" class="muted" font-size="15">Cloud data warehouse and BI</text>
+  <text x="530" y="850" class="ink" font-size="16">AWS migration with Snowflake reporting, Kafka CDC,</text>
+  <text x="530" y="878" class="ink" font-size="16">Spark Parquet transformations, and Tableau dashboards.</text>
+  <text x="1120" y="850" class="accent" font-size="16" font-weight="700">AWS S3, AWS DMS, Snowflake, Tableau, Spark,</text>
+  <text x="1120" y="878" class="accent" font-size="16" font-weight="700">Kafka, Oracle Goldengate, Java, Python</text>
+
+  <text x="90" y="1050" class="muted" font-size="18">Cleaner matrix: richer descriptions, keyword-heavy tools, no category repetition, no chip clutter.</text>
+</svg>
